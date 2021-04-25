@@ -1,0 +1,62 @@
+{
+  "name": "@rweich/userscript-template",
+  "version": "0.0.0-development",
+  "description": "Template for userscript development.",
+  "private": "true",
+  "author": "rweich",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn clean && webpack --mode=development",
+    "build-prod": "yarn clean && webpack --mode=production",
+    "ci": "yarn type-check && yarn lint",
+    "clean": "rimraf ./dist/*",
+    "lint": "eslint ./src/**/*.ts",
+    "lint-tests": "eslint test/**/*.ts",
+    "prepare": "husky install",
+    "type-check": "tsc --noEmit",
+    "update-template": "update-template https://github.com/rweich/userscript-template"
+  },
+  "dependencies": {
+    "rimraf": "^3.0.2",
+    "ts-loader": "^9.1.1",
+    "typescript": "^4.2.4",
+    "webpack": "^5.35.1",
+    "webpack-cli": "^4.6.0",
+    "webpack-userscript": "^2.5.7"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.1",
+    "@commitlint/config-conventional": "^12.1.1",
+    "@rweich/eslint-config": "^1.0.1",
+    "@rweich/prettier-config": "^1.0.0",
+    "@types/webpack-dev-server": "^3.11.3",
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
+    "organize-imports-cli": "^0.8.0",
+    "ts-node": "^9.1.1",
+    "update-template": "^1.3.1",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rweich/userscript-template.git"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "@rweich"
+  },
+  "lint-staged": {
+    "{src,test}/**/*.ts": [
+      "organize-imports-cli",
+      "prettier --write"
+    ]
+  },
+  "prettier": "@rweich/prettier-config"
+}

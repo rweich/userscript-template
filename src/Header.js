@@ -1,0 +1,17 @@
+module.exports = {
+  author: 'the-author',
+  //connect: [''],
+  description: 'the-description',
+  // exclude: [''],
+  // grant: ['unsafeWindow', 'GM_info', 'GM_xmlhttpRequest', 'GM_getTab', 'GM_saveTab', 'GM_getTabs'],
+  // icon: '',
+  license: 'MIT',
+  match: ['*://www.your.match/*'],
+  name: 'the-name',
+  namespace: 'https://the.name.space',
+  noframes: 'true',
+  // require: [],
+  'run-at': 'document-end',
+  // supportURL: 'https://github.com/support/url',
+  version: '[version].[buildTime]',
+};

@@ -1,0 +1,12 @@
+{
+  "files": [
+    ".github/**/*",
+    ".husky/**/*",
+    ".editorconfig",
+    ".gitignore",
+    ".templaterc.json",
+    "commitlint.config.js",
+    "tsconfig.json",
+    "webpack.config.ts"
+  ]
+}
