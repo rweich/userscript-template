@@ -1,19 +1,20 @@
 import WebpackUserscript from 'webpack-userscript';
 
-/* eslint-disable sort-keys */
-const headers: WebpackUserscript.HeaderObject = {
-  name: 'the-name',
-  description: 'the-description',
-  version: '[version].[buildTime]',
-  author: 'the-author',
-  namespace: 'https://the.name.space',
-  license: 'MIT',
-  match: ['*://www.your.match/*'],
-  connect: ['www.your.match'],
-  grant: ['GM.xmlHttpRequest'],
-  noframes: true,
-  'run-at': 'document-end',
-};
-/* eslint-enable sort-keys */
+function generateHeaders(isDevelopment: boolean): WebpackUserscript.HeaderObject {
+  /* eslint-disable sort-keys */
+  return {
+    name: 'userscript-template',
+    description: 'a userscript-template',
+    version: isDevelopment ? '[version].[buildTime]' : '[version]',
+    author: 'rweich',
+    namespace: 'https://github.com/rweich',
+    license: 'MIT',
+    match: ['*://www.google.com/*'],
+    connect: ['www.google.com'],
+    noframes: true,
+    'run-at': 'document-end',
+  };
+  /* eslint-enable sort-keys */
+}
 
-export default headers;
+export default generateHeaders;
