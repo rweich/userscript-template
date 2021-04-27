@@ -6,7 +6,7 @@
   "author": "rweich",
   "license": "MIT",
   "scripts": {
-    "build": "yarn clean && webpack --mode=development",
+    "build": "webpack --mode=development",
     "build-prod": "yarn clean && webpack --mode=production",
     "ci": "yarn type-check && yarn lint",
     "clean": "rimraf ./dist/*",
@@ -14,11 +14,18 @@
     "lint-tests": "eslint test/**/*.ts",
     "prepare": "husky install",
     "type-check": "tsc --noEmit",
-    "update-template": "update-template https://github.com/rweich/userscript-template"
+    "update-template": "update-template https://github.com/rweich/userscript-template",
+    "watch": "webpack watch --mode=development"
   },
   "dependencies": {
+    "axios": "^0.21.1",
+    "axios-userscript-adapter": "^0.1.4",
+    "localstory": "^0.9.1",
+    "loglevel": "^1.7.1",
+    "loglevel-plugin-prefix": "^0.8.4",
     "rimraf": "^3.0.2",
     "ts-loader": "^9.1.1",
+    "ts-log": "^2.2.3",
     "typescript": "^4.2.4",
     "webpack": "^5.35.1",
     "webpack-cli": "^4.6.0",

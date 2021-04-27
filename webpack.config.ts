@@ -2,6 +2,7 @@ import * as path from 'path';
 import * as webpack from 'webpack';
 
 import WebpackUserscript from 'webpack-userscript';
+import headers from './src/Header';
 
 const config = (environment: unknown, options: { mode: string; env: unknown }): webpack.Configuration => {
   const isDevelopment = options.mode === 'development';
@@ -34,14 +35,12 @@ const config = (environment: unknown, options: { mode: string; env: unknown }): 
         'Access-Control-Allow-Origin': '*',
       },
       host: 'localhost',
-      hot: false,
       https: false,
-      liveReload: false,
       port: 11944,
     },
     plugins: [
       new WebpackUserscript({
-        headers: path.resolve(__dirname, 'src', 'Header.js'),
+        headers,
         pretty: true,
         proxyScript: {
           baseUrl: 'http://localhost:11944/',

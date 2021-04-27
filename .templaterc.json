@@ -6,6 +6,7 @@
     ".gitignore",
     ".templaterc.json",
     "commitlint.config.js",
+    "src/Utils/**/*",
     "tsconfig.json",
     "webpack.config.ts"
   ]
