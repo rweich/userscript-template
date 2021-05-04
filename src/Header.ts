@@ -13,6 +13,7 @@ function generateHeaders(isDevelopment: boolean): WebpackUserscript.HeaderObject
     connect: ['www.google.com'],
     noframes: true,
     'run-at': 'document-end',
+    grant: ['GM.registerMenuCommand'],
   };
   /* eslint-enable sort-keys */
 }

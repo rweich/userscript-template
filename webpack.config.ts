@@ -1,6 +1,7 @@
 import * as path from 'path';
 import * as webpack from 'webpack';
 
+import { VueLoaderPlugin } from 'vue-loader';
 import WebpackUserscript from 'webpack-userscript';
 import generateHeaders from './src/Header';
 
@@ -17,14 +18,48 @@ const config = (environment: unknown, options: { mode: string; env: unknown }): 
       publicPath: '/',
     },
     resolve: {
-      extensions: ['.tsx', '.ts', '.js'],
+      extensions: ['.js', '.vue', '.json', '.ts'],
+      alias: {
+        '@': path.resolve(__dirname, 'src/')
+      }
     },
     module: {
       rules: [
         {
-          exclude: /node_modules/,
+          test: /\.vue$/,
+          loader: 'vue-loader',
+        },
+        {
           test: /\.tsx?$/,
-          use: ['ts-loader'],
+          loader: 'ts-loader',
+          exclude: /node_modules/,
+          options: {
+            appendTsSuffixTo: [/\.vue$/]
+          }
+        },
+        {
+          test: /\.css$/i,
+          use: ['vue-style-loader', 'css-loader'],
+        },
+        {
+          test: /\.(png|jpg)$/,
+          loader: 'url-loader'
+        },
+        {
+          test: /\.s[ca]ss$/,
+          use: [
+            'vue-style-loader',
+            'css-loader',
+            {
+              loader: 'sass-loader',
+              options: {
+                implementation: require('sass'),
+                sassOptions: {
+                  indentedSyntax: true // optional
+                },
+              },
+            },
+          ],
         },
       ],
     },
@@ -49,6 +84,9 @@ const config = (environment: unknown, options: { mode: string; env: unknown }): 
           filename: '[basename].proxy.user.js',
         },
       }),
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      new VueLoaderPlugin(),
     ],
     optimization: {
       minimize: false,
