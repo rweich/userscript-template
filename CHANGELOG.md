@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/rweich/userscript-template/compare/v1.0.0...v1.1.0) (2021-05-09)
+
+
+### Features
+
+* add settings dialog ([1fc686a](https://github.com/rweich/userscript-template/commit/1fc686a286b59f83396909d3e547dcb5c07aafc6))
+
 # 1.0.0 (2021-04-27)
 
 
