@@ -3,6 +3,7 @@
 [![speed: blazing](https://img.shields.io/badge/speed-blazing%20%F0%9F%94%A5-brightgreen.svg)](https://twitter.com/acdlite/status/974390255393505280?s=20)
 [![uses badges](https://img.shields.io/badge/uses-badges-important)](https://forthebadge.com)
 [![gluten free](https://img.shields.io/badge/useful-yes-blue)](https://media.giphy.com/media/NEvPzZ8bd1V4Y/source.gif)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Frweich%2Fuserscript-template.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Frweich%2Fuserscript-template?ref=badge_shield)
 
 Template for userscript development.
 
@@ -49,3 +50,7 @@ The resulting userscript can then be found in the `dist`-folder.
 
 Start the release by manually by executing the [release workflow](.github/workflows/release.yml) in your GitHub actions.
 This will use the current state of the main branch to create the userscript files.
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Frweich%2Fuserscript-template.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Frweich%2Fuserscript-template?ref=badge_large)
