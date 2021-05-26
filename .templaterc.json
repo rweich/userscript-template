@@ -5,9 +5,9 @@
     ".editorconfig",
     ".gitignore",
     ".templaterc.json",
-    "commitlint.config.js",
     "src/Header.ts",
     "src/Utils/**/*",
+    "release.config.js",
     "tsconfig.json",
     "webpack.config.ts"
   ]

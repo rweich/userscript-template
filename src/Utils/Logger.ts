@@ -4,7 +4,7 @@ import header from '../Header';
 import { default as logger } from 'loglevel';
 
 reg(logger);
-apply(logger, { template: `[%t] [${header.name}] %l (%n):` });
+apply(logger, { template: `[%t] [${header(false).name}] %l (%n):` });
 logger.enableAll();
 
 export default logger;
