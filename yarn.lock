@@ -6494,6 +6494,11 @@ prettier@^1.18.2:
   resolved "https://registry.yarnpkg.com/@btmills/prettier/-/prettier-2.2.1.tgz#7ccb3f0b9ecf412a66a2706a64c3309c54847ae3"
   integrity sha512-yTTgEeUUI0GW+M4OAOgqe1NpSWwZyFXquto4UB03NAf4vOaKZERXSVCB03Dtcp5vSEIB2oFgDWe0+hUhnWU0vw==
 
+primeflex@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/primeflex/-/primeflex-2.0.0.tgz#b4152a97a455bbfad33503b6e10fe73d1f9e2228"
+  integrity sha512-t6AG3iRI1rh04uI+9nC4JSlbKfA8PnpRDFtjyqi3rDSLRgdfOuhIiunJbjVQ4alnnCfuQAAbVyde1AKN9QxT/w==
+
 primevue@^2.0.0:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/primevue/-/primevue-2.4.1.tgz#88d5b876771be5a01fffc13cc8a4a01568f1fa98"
