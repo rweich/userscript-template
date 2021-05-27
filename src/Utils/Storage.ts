@@ -5,7 +5,7 @@ export default class Storage<T extends Record<string, unknown>> {
   // @ts-ignore - currently there is no type to use :(
   private store;
 
-  public constructor(store: T, namespace: string) {
+  public constructor(store: globalThis.Storage, namespace: string) {
     this.store = createStore(store, namespace);
   }
 
