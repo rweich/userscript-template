@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [1.2.1](https://github.com/rweich/userscript-template/compare/v1.2.0...v1.2.1) (2021-06-12)
+
+
+### Miscellaneous Chores
+
+* update dependencies ([fcb7493](https://github.com/rweich/userscript-template/commit/fcb749385d19d6bf534550c6559b3bb87feb62c8))
+
 ## [1.2.0](https://github.com/rweich/userscript-template/compare/v1.1.0...v1.2.0) (2021-05-27)
 
 
