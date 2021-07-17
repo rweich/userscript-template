@@ -5,9 +5,12 @@ import WebpackUserscript from 'webpack-userscript';
 import generateHeaders from './src/Header';
 import path from 'path';
 
-const config = (environment: unknown, options: { mode: string; env: unknown }): webpack.Configuration => {
+const config = (
+  environment: { BUILD_VERSION?: string },
+  options: { mode: string; env: unknown },
+): webpack.Configuration => {
   const isDevelopment = options.mode === 'development';
-  const headers = generateHeaders(isDevelopment);
+  const headers = generateHeaders(isDevelopment, environment.BUILD_VERSION || undefined);
 
   return {
     /* eslint-disable sort-keys */
