@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.0](https://github.com/rweich/userscript-template/compare/v1.2.1...v1.3.0) (2021-07-17)
+
+
+### Features
+
+* add example scss file and update deps ([ede1bd5](https://github.com/rweich/userscript-template/commit/ede1bd586b9be0003e2532e587ef6facb41ff0bc))
+* add next version number to userscript on release ([d1d0f78](https://github.com/rweich/userscript-template/commit/d1d0f787997d8ab16749dfa1de90e705095e653b))
+
+
+### Bug Fixes
+
+* ourput name in webpack config ([eb40a7a](https://github.com/rweich/userscript-template/commit/eb40a7a85a0f119e6d5075cecfc6904570f7cfae))
+
+
+### Miscellaneous Chores
+
+* add webpack-config-file to tsconfig ([5569f28](https://github.com/rweich/userscript-template/commit/5569f28d216c4f8df9c2072c710b08d0d243a8f1))
+* remove webpack-dev-server ([4447c00](https://github.com/rweich/userscript-template/commit/4447c003ee95b01449e6bca77c90c606645b93bf))
+
 ### [1.2.1](https://github.com/rweich/userscript-template/compare/v1.2.0...v1.2.1) (2021-06-12)
 
 
