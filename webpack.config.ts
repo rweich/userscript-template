@@ -7,13 +7,14 @@ import path from 'path';
 
 const config = (environment: unknown, options: { mode: string; env: unknown }): webpack.Configuration => {
   const isDevelopment = options.mode === 'development';
+  const headers = generateHeaders(isDevelopment);
 
   return {
     /* eslint-disable sort-keys */
     entry: path.resolve(__dirname, 'src', 'index.ts'),
     target: 'web',
     output: {
-      filename: 'bundle.js',
+      filename: `${headers.name}.js`,
       path: path.resolve(__dirname, 'dist'),
       publicPath: '/',
     },
@@ -73,7 +74,7 @@ const config = (environment: unknown, options: { mode: string; env: unknown }): 
     },
     plugins: [
       new WebpackUserscript({
-        headers: generateHeaders(isDevelopment),
+        headers: headers,
         pretty: true,
         proxyScript: {
           baseUrl: 'http://localhost:11944/',
