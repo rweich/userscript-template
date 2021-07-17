@@ -39,9 +39,6 @@ yarn build
 
 # or use watch mode
 yarn watch
-
-# or use the dev-server
-yarn serve
 ```
 
 The resulting userscript can then be found in the `dist`-folder.
