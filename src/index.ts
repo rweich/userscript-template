@@ -1,3 +1,5 @@
+import './styles.scss';
+
 import Settings from '@/Utils/Settings/Settings';
 import Storage from '@/Utils/Storage';
 import generateHeaders from '@/Header';
