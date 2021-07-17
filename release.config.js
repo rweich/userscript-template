@@ -13,6 +13,13 @@ module.exports = {
       },
     ],
     [
+      "@semantic-release/exec",
+      {
+        "verifyConditionsCmd": "yarn ci",
+        "prepareCmd": "yarn build-prod --env BUILD_VERSION=${nextRelease.version}",
+      }
+    ],
+    [
       '@semantic-release/release-notes-generator',
       {
         preset: 'conventionalcommits',

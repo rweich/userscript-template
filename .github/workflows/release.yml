@@ -13,8 +13,7 @@ jobs:
         with:
           node-version: 12
       - run: yarn install
-      - run: yarn build-prod
-      - name: Release
+      - name: Build and Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: yarn semantic-release

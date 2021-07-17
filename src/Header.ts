@@ -1,11 +1,11 @@
 import WebpackUserscript from 'webpack-userscript';
 
-function generateHeaders(isDevelopment: boolean): WebpackUserscript.HeaderObject {
+function generateHeaders(isDevelopment: boolean, buildVersion?: string): WebpackUserscript.HeaderObject {
   /* eslint-disable sort-keys */
   return {
     name: 'userscript-template',
     description: 'a userscript-template',
-    version: isDevelopment ? '[version].[buildTime]' : '[version]',
+    version: (buildVersion !== undefined ? buildVersion : '[version]') + (isDevelopment ? '.[buildTime]' : ''),
     author: 'rweich',
     namespace: 'https://github.com/rweich',
     license: 'MIT',
