@@ -1,9 +1,9 @@
-import * as path from 'path';
 import * as webpack from 'webpack';
 
 import { VueLoaderPlugin } from 'vue-loader';
 import WebpackUserscript from 'webpack-userscript';
 import generateHeaders from './src/Header';
+import path from 'path';
 
 const config = (environment: unknown, options: { mode: string; env: unknown }): webpack.Configuration => {
   const isDevelopment = options.mode === 'development';
@@ -20,8 +20,8 @@ const config = (environment: unknown, options: { mode: string; env: unknown }): 
     resolve: {
       extensions: ['.js', '.vue', '.json', '.ts'],
       alias: {
-        '@': path.resolve(__dirname, 'src/')
-      }
+        '@': path.resolve(__dirname, 'src/'),
+      },
     },
     module: {
       rules: [
@@ -34,8 +34,8 @@ const config = (environment: unknown, options: { mode: string; env: unknown }): 
           loader: 'ts-loader',
           exclude: /node_modules/,
           options: {
-            appendTsSuffixTo: [/\.vue$/]
-          }
+            appendTsSuffixTo: [/\.vue$/],
+          },
         },
         {
           test: /\.css$/i,
@@ -43,10 +43,10 @@ const config = (environment: unknown, options: { mode: string; env: unknown }): 
         },
         {
           test: /\.(png|jpg)$/,
-          loader: 'url-loader'
+          loader: 'url-loader',
         },
         {
-          test: /\.s[ca]ss$/,
+          test: /\.s[ac]ss$/,
           use: [
             'vue-style-loader',
             'css-loader',

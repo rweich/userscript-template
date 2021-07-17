@@ -37,7 +37,8 @@
   },
   "include": [
     "src/**/*.ts",
-    "src/**/*.vue"
+    "src/**/*.vue",
+    "webpack.config.ts"
   ],
   "exclude": [
     "node_modules"
