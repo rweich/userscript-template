@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [1.3.1](https://github.com/rweich/userscript-template/compare/v1.3.0...v1.3.1) (2021-08-05)
+
+
+### Documentation
+
+* remove yarn serve mention ([8f7b2bc](https://github.com/rweich/userscript-template/commit/8f7b2bca16498fadb43c97556c684fae5ef44d67))
+
+
+### Miscellaneous Chores
+
+* **deps:** bump tar from 6.1.0 to 6.1.5 ([416533d](https://github.com/rweich/userscript-template/commit/416533da8a2f3161a77fa9dd82f0d40693f3d406))
+
 ## [1.3.0](https://github.com/rweich/userscript-template/compare/v1.2.1...v1.3.0) (2021-07-17)
 
 
