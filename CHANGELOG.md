@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [1.3.2](https://github.com/rweich/userscript-template/compare/v1.3.1...v1.3.2) (2021-09-04)
+
+
+### Bug Fixes
+
+* typescript compiler error in Storage ([131d42e](https://github.com/rweich/userscript-template/commit/131d42ee18d1316c93a4158b03adb8ca35788fa4))
+
+
+### Miscellaneous Chores
+
+* update dependencies ([14d1727](https://github.com/rweich/userscript-template/commit/14d17279fa8593a796692ec9f1a427dc3d00642b))
+* update dependencies for axios cve ([79fd630](https://github.com/rweich/userscript-template/commit/79fd630c227136cb39b240646d970d86fe338d55))
+
 ### [1.3.1](https://github.com/rweich/userscript-template/compare/v1.3.0...v1.3.1) (2021-08-05)
 
 
