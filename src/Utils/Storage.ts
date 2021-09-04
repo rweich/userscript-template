@@ -13,7 +13,7 @@ export default class Storage<T extends Record<string, unknown>> {
     return this.store.get(key);
   }
 
-  public set<K extends keyof T>(key: K, value: T[K], ttl?: number): void {
+  public set<K extends Extract<keyof T, string>>(key: K, value: T[K], ttl?: number): void {
     this.store.set(key, value, { ttl });
   }
 }
