@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [1.3.3](https://github.com/rweich/userscript-template/compare/v1.3.2...v1.3.3) (2021-09-27)
+
+
+### Miscellaneous Chores
+
+* update dependencies ([4a36ca9](https://github.com/rweich/userscript-template/commit/4a36ca98a3c75d9ee84c31e26f65fc1f2170e329))
+* **deps:** bump semver-regex from 3.1.2 to 3.1.3 ([52a6b20](https://github.com/rweich/userscript-template/commit/52a6b2020df0691be9247ac97fb340529094bba1))
+
 ### [1.3.2](https://github.com/rweich/userscript-template/compare/v1.3.1...v1.3.2) (2021-09-04)
 
 
