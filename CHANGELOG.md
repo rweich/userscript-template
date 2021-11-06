@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [1.3.4](https://github.com/rweich/userscript-template/compare/v1.3.3...v1.3.4) (2021-11-06)
+
+
+### Miscellaneous Chores
+
+* change metadata for dev-userscript ([9994181](https://github.com/rweich/userscript-template/commit/9994181243f5b2827ccfed8701b69455632838bf))
+
 ### [1.3.3](https://github.com/rweich/userscript-template/compare/v1.3.2...v1.3.3) (2021-09-27)
 
 
