@@ -2,10 +2,10 @@ import WebpackUserscript from 'webpack-userscript';
 
 function generateHeaders(isDevelopment: boolean, buildVersion?: string): WebpackUserscript.HeaderObject {
   /* eslint-disable sort-keys */
-  return {
+  const header: WebpackUserscript.HeaderObject = {
     name: 'userscript-template',
     description: 'a userscript-template',
-    version: (buildVersion !== undefined ? buildVersion : '[version]') + (isDevelopment ? '.[buildTime]' : ''),
+    version: buildVersion !== undefined ? buildVersion : '[version]',
     author: 'rweich',
     namespace: 'https://github.com/rweich',
     license: 'MIT',
@@ -16,6 +16,15 @@ function generateHeaders(isDevelopment: boolean, buildVersion?: string): Webpack
     grant: ['GM.registerMenuCommand'],
   };
   /* eslint-enable sort-keys */
+
+  if (isDevelopment) {
+    header.name += ' (DEV)';
+    header.version += '.[buildTime]';
+    delete header.downloadURL;
+    delete header.updateURL;
+  }
+
+  return header;
 }
 
 export default generateHeaders;
