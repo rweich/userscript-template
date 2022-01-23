@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [1.3.5](https://github.com/rweich/userscript-template/compare/v1.3.4...v1.3.5) (2022-01-23)
+
+
+### Miscellaneous Chores
+
+* **deps:** bump follow-redirects from 1.14.4 to 1.14.7 ([474f04b](https://github.com/rweich/userscript-template/commit/474f04b5fb8f889ea943faf87a3e53181e72423f))
+* **deps:** bump nanoid from 3.1.28 to 3.2.0 ([a90830a](https://github.com/rweich/userscript-template/commit/a90830a5a3df46806fe9d74aef3823abd4be6476))
+* **deps:** bump node-fetch from 2.6.5 to 2.6.7 ([7641c7f](https://github.com/rweich/userscript-template/commit/7641c7f5ab9e41a18112267e9f0be6aa145e1d52))
+
 ### [1.3.4](https://github.com/rweich/userscript-template/compare/v1.3.3...v1.3.4) (2021-11-06)
 
 
