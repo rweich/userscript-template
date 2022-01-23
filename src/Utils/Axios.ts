@@ -5,4 +5,4 @@ import xhrAdapter from 'axios-userscript-adapter/dist/esm';
 // @ts-ignore
 axios.defaults.adapter = xhrAdapter;
 
-export default axios;
+export { default } from 'axios';

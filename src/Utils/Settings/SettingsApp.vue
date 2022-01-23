@@ -19,21 +19,22 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
 import Button from 'primevue/button/Button';
-import DefaultSettings from "@/Utils/Settings/DefaultSettings";
 import Dialog from 'primevue/dialog/Dialog';
 import Fieldset from 'primevue/fieldset/Fieldset';
 import InputSwitch from 'primevue/inputswitch/InputSwitch';
-import {SettingsType} from "@/Utils/Settings/SettingsType";
+import { Component, Vue } from 'vue-property-decorator';
+
+import DefaultSettings from '@/Utils/Settings/DefaultSettings';
+import { SettingsType } from '@/Utils/Settings/SettingsType';
 
 @Component({
   components: {
     Button,
     Dialog,
     Fieldset,
-    InputSwitch
-  }
+    InputSwitch,
+  },
 })
 export default class SettingsApp extends Vue {
   showDialog = false;
@@ -48,7 +49,7 @@ export default class SettingsApp extends Vue {
     this.$logger.info('saving settings ...');
     this.showDialog = false;
     const settings: SettingsType = {
-      enabled: this.enabled
+      enabled: this.enabled,
     };
     this.$root.$emit('saveSettings', settings);
   }

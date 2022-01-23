@@ -1,8 +1,9 @@
 import './styles.scss';
 
+import generateHeaders from '@/Header';
 import Settings from '@/Utils/Settings/Settings';
 import Storage from '@/Utils/Storage';
-import generateHeaders from '@/Header';
+
 import logger from './Utils/Logger';
 
 logger.info('hello world');

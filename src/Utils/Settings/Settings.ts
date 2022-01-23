@@ -2,16 +2,16 @@ import 'primevue/resources/primevue.min.css';
 import 'primevue/resources/themes/saga-blue/theme.css';
 import 'primeflex/primeflex.css';
 
+import { EventEmitter } from 'eventemitter3';
 import * as PrimeVue from 'primevue/config';
+import { Logger } from 'ts-log';
+import Vue from 'vue';
 
 import DefaultSettings from '@/Utils/Settings/DefaultSettings';
-import { EventEmitter } from 'eventemitter3';
-import { Logger } from 'ts-log';
 import SettingsApp from '@/Utils/Settings/SettingsApp.vue';
 import { SettingsType } from '@/Utils/Settings/SettingsType';
-import Storage from '@/Utils/Storage';
-import Vue from 'vue';
 import VueLogger from '@/Utils/Settings/VueLogger';
+import Storage from '@/Utils/Storage';
 
 type EventType = {
   newSettings: (settings: SettingsType) => void;
