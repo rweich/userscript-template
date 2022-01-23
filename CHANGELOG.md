@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.0](https://github.com/rweich/userscript-template/compare/v1.3.5...v2.0.0) (2022-01-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* the minimum required version of node is now v14.17
+
+### Miscellaneous Chores
+
+* drop support for node v12 and v15 ([5d8393d](https://github.com/rweich/userscript-template/commit/5d8393d06d46d8fbfd5de6c68cc0699be8f5fdfc))
+* fix linting errors ([021f95d](https://github.com/rweich/userscript-template/commit/021f95d809c003e7651be72b0dc970f6e7d5fe07))
+* update dependencies (major) ([b3ee78b](https://github.com/rweich/userscript-template/commit/b3ee78bacee2d18434ce70d890523529ef899253))
+
 ### [1.3.5](https://github.com/rweich/userscript-template/compare/v1.3.4...v1.3.5) (2022-01-23)
 
 
