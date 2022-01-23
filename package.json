@@ -92,12 +92,10 @@
         "error",
         {
           "singleline": {
-            "max": 10,
-            "allowFirstLine": true
+            "max": 10
           },
           "multiline": {
-            "max": 1,
-            "allowFirstLine": true
+            "max": 1
           }
         }
       ]
