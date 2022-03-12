@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.0.1](https://github.com/rweich/userscript-template/compare/v2.0.0...v2.0.1) (2022-03-12)
+
+
+### Miscellaneous Chores
+
+* **deps:** bump follow-redirects from 1.14.7 to 1.14.8 ([f9ee34b](https://github.com/rweich/userscript-template/commit/f9ee34b344fc215cac3c39e5e8928b543529126e))
+
 ## [2.0.0](https://github.com/rweich/userscript-template/compare/v1.3.5...v2.0.0) (2022-01-23)
 
 
