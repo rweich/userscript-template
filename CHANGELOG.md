@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.0.3](https://github.com/rweich/userscript-template/compare/v2.0.2...v2.0.3) (2022-06-04)
+
+
+### Miscellaneous Chores
+
+* **deps:** bump npm from 8.3.2 to 8.12.0 ([f2c1085](https://github.com/rweich/userscript-template/commit/f2c108550d8e836b677793467361206fc6841104))
+* **deps:** bump semver-regex from 3.1.3 to 3.1.4 ([ddd4cc0](https://github.com/rweich/userscript-template/commit/ddd4cc06b7a2ad946f39f248141f6080aca4c817))
+
 ### [2.0.2](https://github.com/rweich/userscript-template/compare/v2.0.1...v2.0.2) (2022-04-02)
 
 
