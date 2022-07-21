@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.0.5](https://github.com/rweich/userscript-template/compare/v2.0.4...v2.0.5) (2022-07-21)
+
+
+### Miscellaneous Chores
+
+* **deps:** bump terser from 5.10.0 to 5.14.2 ([a74ce54](https://github.com/rweich/userscript-template/commit/a74ce54d6439ed574f18c08095c66cdd93c52f9b))
+
 ### [2.0.4](https://github.com/rweich/userscript-template/compare/v2.0.3...v2.0.4) (2022-06-10)
 
 
