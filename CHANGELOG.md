@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.0.6](https://github.com/rweich/userscript-template/compare/v2.0.5...v2.0.6) (2022-11-16)
+
+
+### Miscellaneous Chores
+
+* **deps:** bump loader-utils from 1.4.0 to 1.4.1 ([cdbcb67](https://github.com/rweich/userscript-template/commit/cdbcb67500b748de3d5c2032838b994ff9b966ac))
+* **deps:** bump loader-utils from 1.4.1 to 1.4.2 ([83d32de](https://github.com/rweich/userscript-template/commit/83d32dec373ccdd94d5a2a077810a5b0dfef92d4))
+
 ### [2.0.5](https://github.com/rweich/userscript-template/compare/v2.0.4...v2.0.5) (2022-07-21)
 
 
