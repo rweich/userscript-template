@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.0.7](https://github.com/rweich/userscript-template/compare/v2.0.6...v2.0.7) (2023-01-07)
+
+
+### Miscellaneous Chores
+
+* **deps:** bump json5 from 1.0.1 to 1.0.2 ([871b946](https://github.com/rweich/userscript-template/commit/871b946e17ac0db460ebfca8643c49de95c9b8b6))
+
 ### [2.0.6](https://github.com/rweich/userscript-template/compare/v2.0.5...v2.0.6) (2022-11-16)
 
 
