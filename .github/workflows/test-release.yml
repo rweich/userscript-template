@@ -1,23 +1,44 @@
 name: Test-Release
 
-on: [ push ]
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   release:
+    name: test release
 
     runs-on: ubuntu-latest
 
     steps:
+      - uses: step-security/harden-runner@ebacdc22ef6c2cfb85ee5ded8f2e640f4c776dd5 # 2.0.0
+        with:
+          disable-sudo: true
+          egress-policy: block
+          allowed-endpoints: >
+            github.com:443
+            registry.npmjs.org:443
+            registry.yarnpkg.com:443
+
       - name: Get branch name
+        uses: tj-actions/branch-names@a594c1e96eab7790611fdaf5bc8f76ea55cedabd # 6.3
         id: branch-name
-        uses: tj-actions/branch-names@v5
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+
+      - name: Checkout
+        uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # 3.1.0
+
+      - name: Install Node
+        uses: actions/setup-node@8c91899e586c5b171469028077307d293428b516 # 3.5.1
         with:
           node-version: 16
-      - run: yarn install
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
       - name: Release Test
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
         run: yarn semantic-release --dry-run --branches ${{ steps.branch-name.outputs.current_branch }}
