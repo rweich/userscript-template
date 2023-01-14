@@ -5,7 +5,7 @@ function generateHeaders(isDevelopment: boolean, buildVersion?: string): Webpack
   const header: WebpackUserscript.HeaderObject = {
     name: 'userscript-template',
     description: 'a userscript-template',
-    version: buildVersion !== undefined ? buildVersion : '[version]',
+    version: buildVersion === undefined ? '[version]' : buildVersion,
     author: 'rweich',
     namespace: 'https://github.com/rweich',
     license: 'MIT',
