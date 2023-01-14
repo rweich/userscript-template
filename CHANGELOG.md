@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.0](https://github.com/rweich/userscript-template/compare/v2.0.10...v3.0.0) (2023-01-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* vue-property-decorator package was removed due to it being not necessary anymore
+
+### Features
+
+* add style-loader to lazy load the example css ([0253303](https://github.com/rweich/userscript-template/commit/02533032d40e78529c00e9689e73f62dc10b9e4c))
+* update settings to use vue composition api ([dc7f876](https://github.com/rweich/userscript-template/commit/dc7f876ae15d0f25b31449f3a64e5afa524ebe0b))
+
 ### [2.0.10](https://github.com/rweich/userscript-template/compare/v2.0.9...v2.0.10) (2023-01-14)
 
 
