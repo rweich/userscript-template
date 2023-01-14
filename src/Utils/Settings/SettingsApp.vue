@@ -4,7 +4,7 @@
       <Fieldset legend="Misc" class="p-mt-5">
         <div class="p-grid p-align-center p-mt-2 p-mx-2">
           <div class="p-col p-grid p-align-center">
-            <label for="enabled" class="p-mr-2">Enable Userscript:</label>
+            <label for="enabled" class="p-mr-2 p-col-4">Enable Userscript:</label>
             <InputSwitch id="enabled" v-model="enabled" />
           </div>
         </div>
@@ -18,46 +18,41 @@
   </div>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
+import { default as EventEmitter } from 'eventemitter3';
 import Button from 'primevue/button/Button';
 import Dialog from 'primevue/dialog/Dialog';
 import Fieldset from 'primevue/fieldset/Fieldset';
 import InputSwitch from 'primevue/inputswitch/InputSwitch';
-import { Component, Vue } from 'vue-property-decorator';
+import { Logger } from 'ts-log';
+import { inject, ref } from 'vue';
 
 import DefaultSettings from '@/Utils/Settings/DefaultSettings';
+import { SettingsEventType } from '@/Utils/Settings/Settings';
 import { SettingsType } from '@/Utils/Settings/SettingsType';
 
-@Component({
-  components: {
-    Button,
-    Dialog,
-    Fieldset,
-    InputSwitch,
-  },
-})
-export default class SettingsApp extends Vue {
-  showDialog = false;
+let showDialog = ref(false);
+let enabled = ref(true);
 
-  // settings data
-  enabled = true;
+const eventEmitter = inject<EventEmitter<SettingsEventType>>('eventEmitter');
+eventEmitter?.on('openDialog', (settings) => {
+  showDialog.value = true;
+  loadSettings(settings);
+});
+const logger = inject<Logger>('logger');
 
-  // prop for easy external settings injection
-  injectSettings = (settings?: Partial<SettingsType>): void => this.loadSettings(settings);
+function save(): void {
+  logger?.info('saving settings ...');
+  showDialog.value = false;
+  const settings: SettingsType = {
+    enabled: enabled.value,
+  };
+  eventEmitter?.emit('newSettings', settings);
+}
 
-  public save(): void {
-    this.$logger.info('saving settings ...');
-    this.showDialog = false;
-    const settings: SettingsType = {
-      enabled: this.enabled,
-    };
-    this.$root.$emit('saveSettings', settings);
-  }
-
-  private loadSettings(payload?: Partial<SettingsType>): void {
-    const settings = DefaultSettings.merge(payload);
-    this.$logger.info('loading settings ...', settings);
-    this.enabled = settings.enabled;
-  }
+function loadSettings(payload?: Partial<SettingsType>): void {
+  const settings = DefaultSettings.merge(payload);
+  logger?.info('loading settings ...', settings);
+  enabled.value = settings.enabled;
 }
 </script>
