@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.0.9](https://github.com/rweich/userscript-template/compare/v2.0.8...v2.0.9) (2023-01-14)
+
+
+### Documentation
+
+* add installation note ([52d5722](https://github.com/rweich/userscript-template/commit/52d5722bc487a998fbf44a04da0cc97c41aff454))
+
 ### [2.0.8](https://github.com/rweich/userscript-template/compare/v2.0.7...v2.0.8) (2023-01-14)
 
 
