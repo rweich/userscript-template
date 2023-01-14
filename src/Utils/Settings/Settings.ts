@@ -10,18 +10,18 @@ import Vue from 'vue';
 import DefaultSettings from '@/Utils/Settings/DefaultSettings';
 import SettingsApp from '@/Utils/Settings/SettingsApp.vue';
 import { SettingsType } from '@/Utils/Settings/SettingsType';
-import VueLogger from '@/Utils/Settings/VueLogger';
 import Storage from '@/Utils/Storage';
 
-type EventType = {
+export type SettingsEventType = {
   newSettings: (settings: SettingsType) => void;
+  openDialog: (settings: SettingsType) => void;
 };
 export type SettingsStorageType = Storage<{ settings: SettingsType }>;
 
 export default class Settings {
   private readonly storage: SettingsStorageType;
   private readonly logger: Logger;
-  private readonly eventEmitter = new EventEmitter<EventType>();
+  private readonly eventEmitter = new EventEmitter<SettingsEventType>();
 
   private readonly SETTINGS_SAVE_TIME_MS = 365 * 24 * 60 * 60 * 1000;
 
@@ -41,18 +41,21 @@ export default class Settings {
     this.logger.info(body, document.querySelector('#userscript-settings-container'));
 
     Vue.use(PrimeVue);
-    Vue.use(VueLogger);
 
-    const vue = new Vue({
+    new Vue({
       el: div,
+      provide: {
+        eventEmitter: this.eventEmitter,
+        logger: this.logger,
+      },
       render: (h) => h(SettingsApp),
-    }).$on('saveSettings', (settings: SettingsType) => {
-      this.eventEmitter.emit('newSettings', settings);
-      this.storeSettings(settings);
     });
 
-    GM.registerMenuCommand('Settings ...', () => this.openSettingsDialog(vue));
+    GM.registerMenuCommand('Settings ...', () =>
+      this.eventEmitter.emit('openDialog', this.storage.get('settings') as SettingsType),
+    );
     this.eventEmitter.emit('newSettings', DefaultSettings.merge(this.storage.get('settings')));
+    this.eventEmitter.on('newSettings', (settings) => this.storeSettings(settings));
 
     return this;
   }
@@ -60,7 +63,7 @@ export default class Settings {
   /**
    * Allows to register a callback function no be notified when the settings were changed
    */
-  public onNewSettings(callback: EventType['newSettings']): this {
+  public onNewSettings(callback: SettingsEventType['newSettings']): this {
     this.eventEmitter.on('newSettings', callback);
     return this;
   }
@@ -68,11 +71,5 @@ export default class Settings {
   private storeSettings(settings: SettingsType): void {
     this.logger.info('saving settings to storage', settings);
     this.storage.set('settings', settings, this.SETTINGS_SAVE_TIME_MS);
-  }
-
-  private openSettingsDialog(vue: Vue): void {
-    this.logger.info('opening settings dialog ...');
-    vue.$children[0].$data.showDialog = true;
-    vue.$children[0].$data.injectSettings(this.storage.get('settings'));
   }
 }
