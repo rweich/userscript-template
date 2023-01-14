@@ -48,6 +48,13 @@ The resulting userscript can then be found in the `dist`-folder.
 Start the release by manually by executing the [release workflow](.github/workflows/release.yml) in your GitHub actions.
 This will use the current state of the main branch to create the userscript files.
 
+### Installation
+
+To run this script an userscript manager is required. E.g. Greasemonkey, Tampermonkey, Violentmonkey.
+
+Install the userscript by downloading the latest release: [userscript-template.user.js](https://github.com/rweich/userscript-template/releases/latest/download/userscript-template.user.js).
+
+The userscript manager should install it automatically when the download is triggered. If not, check its respective docs.
 
 ## License
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Frweich%2Fuserscript-template.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Frweich%2Fuserscript-template?ref=badge_large)
