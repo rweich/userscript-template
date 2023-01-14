@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.0.8](https://github.com/rweich/userscript-template/compare/v2.0.7...v2.0.8) (2023-01-14)
+
+
+### Bug Fixes
+
+* linting error ([6e15557](https://github.com/rweich/userscript-template/commit/6e15557d60c95fbb05ecfc75d4f7b17afdbd3282))
+
+
+### Miscellaneous Chores
+
+* update dependencies ([5e7098c](https://github.com/rweich/userscript-template/commit/5e7098ce93a32561850635aae2e33168a39e6b67))
+
 ### [2.0.7](https://github.com/rweich/userscript-template/compare/v2.0.6...v2.0.7) (2023-01-07)
 
 
