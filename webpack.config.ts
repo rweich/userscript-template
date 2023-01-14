@@ -1,9 +1,10 @@
-import * as webpack from 'webpack';
+import path from 'node:path';
 
 import { VueLoaderPlugin } from 'vue-loader';
+import * as webpack from 'webpack';
 import WebpackUserscript from 'webpack-userscript';
+
 import generateHeaders from './src/Header';
-import path from 'path';
 
 const config = (
   environment: { BUILD_VERSION?: string },
@@ -51,8 +52,22 @@ const config = (
         },
         {
           test: /\.s[ac]ss$/,
+          exclude: /\.lazy\.s[ac]ss$/,
           use: [
             'vue-style-loader',
+            'css-loader',
+            {
+              loader: 'sass-loader',
+              options: {
+                implementation: require('sass'),
+              },
+            },
+          ],
+        },
+        {
+          test: /\.lazy\.s[ac]ss$/,
+          use: [
+            { loader: 'style-loader', options: { injectType: 'lazyStyleTag' } },
             'css-loader',
             {
               loader: 'sass-loader',
@@ -73,7 +88,7 @@ const config = (
       },
       host: 'localhost',
       https: false,
-      port: 11944,
+      port: 11_944,
     },
     plugins: [
       new WebpackUserscript({
