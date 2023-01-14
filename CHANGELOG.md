@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.0.10](https://github.com/rweich/userscript-template/compare/v2.0.9...v2.0.10) (2023-01-14)
+
+
+### Bug Fixes
+
+* allow another host for the release workflow ([dffa10d](https://github.com/rweich/userscript-template/commit/dffa10d46ad669363c2962ad46de93116ed08806))
+
 ### [2.0.9](https://github.com/rweich/userscript-template/compare/v2.0.8...v2.0.9) (2023-01-14)
 
 
