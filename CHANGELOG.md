@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [3.0.1](https://github.com/rweich/userscript-template/compare/v3.0.0...v3.0.1) (2023-07-29)
+
+
+### Miscellaneous Chores
+
+* **deps:** bump http-cache-semantics from 4.1.0 to 4.1.1 ([0f5937c](https://github.com/rweich/userscript-template/commit/0f5937ccc88ae5859e279adf89ecf829f4e7fc0d))
+* **deps:** bump semver from 5.7.1 to 5.7.2 ([30e99dc](https://github.com/rweich/userscript-template/commit/30e99dcb819d5bb84412b2885a1649444c02f996))
+* **deps:** bump webpack from 5.75.0 to 5.76.0 ([5044ed4](https://github.com/rweich/userscript-template/commit/5044ed43039cd91a6c93a6ee6da088ff870b0a56))
+* **deps:** bump word-wrap from 1.2.3 to 1.2.4 ([bad250e](https://github.com/rweich/userscript-template/commit/bad250ebb41ecdda69ed64ea1c5c352959c71409))
+
 ## [3.0.0](https://github.com/rweich/userscript-template/compare/v2.0.10...v3.0.0) (2023-01-14)
 
 
