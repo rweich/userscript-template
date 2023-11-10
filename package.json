@@ -18,7 +18,7 @@
     "watch": "webpack watch --mode=development"
   },
   "dependencies": {
-    "axios": "^0.25.0",
+    "axios": "^1.6.0",
     "axios-userscript-adapter": "^0.1.8",
     "css-loader": "^6.5.1",
     "deepmerge": "^4.2.2",
